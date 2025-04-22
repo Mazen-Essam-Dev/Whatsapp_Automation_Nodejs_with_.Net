@@ -1,0 +1,160 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+
+    <link href="~/styles/main.b45e9251.css" rel="stylesheet" />
+    <link href="~/styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="~/sysImages/logo.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Whats app website for Benan company">
+    <link rel="apple-touch-icon" href="~/sysImages/logo.svg" />
+    <link rel="manifest" href="https://bnan-whapp-new-system.netlify.app/manifest.json">
+    <title>@ViewBag.Title</title>
+
+
+</head>
+<body>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root">
+        <!-- الشعار -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="~/sysImages/logo.13ef850795bad4023228a711f9ff36cb.svg" alt="brand">
+                    خدمة واتساب
+                </a>
+            </div>
+        </nav>
+
+        <!-- الترحيب والقائمة -->
+        <div class="container" id="Nav-container">
+            <div class="row">
+                <div class="col p-0">
+                    <nav class="navbar navbar-expand-lg nav-items p-3">
+                        <div dir="auto" style="margin-inline-end:1130px;">
+                            <p>مرحبا @ViewBag.Name</p>
+                            <p> @ViewBag.Mobile</p>
+                            <p>@ViewBag.Connect_status</p>
+                        </div>
+
+                        <div class="container-fluid gap-3">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav m-auto mb-2 mb-lg-0 pe-1 gap-5">
+                                    <li class="nav-item" style="display:none;">
+                                        <a class="nav-link active" id="no" href="/Sender" data-discover="true"> <i class="fa-solid fa-user-plus"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        @*<a class="nav-link active" id="Sender" href="/Sender" data-discover="true">إضافة مرسل <i class="fa-solid fa-user-plus"></i></a>*@
+                                        <a class="nav-link" id="Sender" href="/Sender" data-discover="true">إضافة مرسل <i class="fa-solid fa-user-plus"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="QrConnect" href="/QrConnect" data-discover="true">الاقتران <i class="fa-solid fa-share-nodes"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Recive" href="/Recive/Index" data-discover="true">المرسل إليه <i class="fa-solid fa-at"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="SendMessages" href="#/SendMessages" data-discover="true">إرسال الرسائل <i class="fa-regular fa-message"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn tooltipp" id="RePassword" href="/RePassword" data-discover="true">
+                                        <img src="~/sysImages/ChangePass.4949f425f85d52d46c319ad60314c9fb.svg" alt="Change Pass icon">
+                                        <span class="tooltiptext">تغيير كلمة السر</span>
+                                    </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <i class="fa-solid fa-lock NavbarLock d-none"></i>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- زر تسجيل الخروج -->
+            <a href="/Login" data-discover="true">
+                <i data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="تسجيل الخروج"
+                   class="fa-solid fa-arrow-right-from-bracket logout"></i>
+            </a>
+        </div>
+
+        <!-- قسم الجدول والصفحة -->
+        <div class="container Pages-container">
+            <div class="container py-4 d-flex align-items-center justify-content-center">
+                <div class="row justify-content-center w-100">
+                    <div class="col-md-10 col-lg-10">
+
+                        @RenderBody()
+
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+    </div>
+    <partial name="_ValidationScriptsPartial" > @*for asp-for*@
+
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>  @*<!-- مهم لفتح ال bootstrap and modals -->*@
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> @*<!-- مهم لفتح ال bootstrap and modals -->*@
+        
+
+        <!-- SweetAlert2 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+    <script defer="defer" href="~/js/main.abef0229.js"></script>
+
+    <script>
+
+            $(document).ready(function () {
+                var typeUser = "@ViewBag.typeUser";
+                var currentUrl = window.location.pathname;
+                if (currentUrl === "/Login") {
+                    //$('.navbar-nav .nav-link').removeClass('active'); // شيل من الكل
+                }
+                $('.navbar-nav .nav-link').each(function () {
+                    var linkUrl = $(this).attr('href');
+
+                    // تطابق الرابط الحالي مع رابط العنصر
+                    if (linkUrl === currentUrl) {
+                        $('.navbar-nav .nav-link').removeClass('active'); // شيل من الكل
+                        $(this).addClass('active'); // ضف للكائن المطابق
+                    }
+                });
+
+                if (typeUser == "S") {
+                    $("#QrConnect").addClass("disabled").css("pointer-events", "none").css("opacity", "0.5");
+                    $("#Recive").addClass("disabled").css("pointer-events", "none").css("opacity", "0.5");
+                    $("#SendMessages").addClass("disabled").css("pointer-events", "none").css("opacity", "0.5");
+                }
+                else{
+                    $("#Sender").addClass("disabled").css("pointer-events", "none").css("opacity", "0.5");
+                }
+
+            });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts2", required: false) @*<!-- أضف هذا السطر -->*@
+</body>
+</html>

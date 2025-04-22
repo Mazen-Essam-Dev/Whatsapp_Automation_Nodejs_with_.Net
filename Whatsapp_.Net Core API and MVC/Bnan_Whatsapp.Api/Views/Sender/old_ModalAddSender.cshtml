@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "خدمة واتساب";
+}
+
+<div class="modal fade show" id="AddSenderModal" tabindex="-1" aria-labelledby="AddSenderModalLabel" style="display: block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- رأس المودال -->
+            <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 m-auto" id="AddSenderModalLabel">إضافة مرسل</h1>
+                <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- جسم المودال -->
+            <div class="modal-body AddSenderModal">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+
+                        <!-- نموذج الإدخال -->
+                        <form>
+
+                            <!-- رقم الجوال -->
+                            <div class="mb-4">
+                                <label for="phone" class="form-label">جوال المرسل</label>
+                                <div class="input-group">
+                                    <input type="tel"
+                                           class="form-control inputStyle tel-input"
+                                           id="phone"
+                                           name="phone"
+                                           maxlength="20">
+                                    <select class="input-group-text counterCode" name="counterCode">
+                                        <option value="+966">+966</option>
+                                        <option value="+962">+962</option>
+                                        <option value="+20">+20</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- اسم المرسل -->
+                            <div class="mb-4">
+                                <label for="Name" class="form-label">اسم المرسل</label>
+                                <input type="text"
+                                       class="form-control inputStyle"
+                                       id="Name"
+                                       name="Name">
+                            </div>
+
+                            <!-- زر الإضافة -->
+                            <button type="submit" class="btn Btn-Style w-100">إضافة</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

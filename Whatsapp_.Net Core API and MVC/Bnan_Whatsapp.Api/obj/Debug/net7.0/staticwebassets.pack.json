@@ -1,0 +1,121 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HP\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "PackagePath": "staticwebassets\\noty.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "PackagePath": "staticwebassets\\toastr.js"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\ContentBg.a2d396e8c30321fe7428.png",
+      "PackagePath": "staticwebassets\\FontStyles\\ContentBg.a2d396e8c30321fe7428.png"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-brands-400.26b80c8830bebf340211.ttf",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-brands-400.26b80c8830bebf340211.ttf"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-brands-400.fdbb558523a380307689.woff2",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-brands-400.fdbb558523a380307689.woff2"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-regular-400.05fdd87be89f7f8f0a1e.ttf",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-regular-400.05fdd87be89f7f8f0a1e.ttf"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-regular-400.4f6a2dabee9c092d09b9.woff2",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-regular-400.4f6a2dabee9c092d09b9.woff2"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-solid-900.83a538a018a9e44b023a.woff2",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-solid-900.83a538a018a9e44b023a.woff2"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\FontStyles\\fa-solid-900.ad1782c70927ebc5bc87.ttf",
+      "PackagePath": "staticwebassets\\FontStyles\\fa-solid-900.ad1782c70927ebc5bc87.ttf"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\js\\main.abef0229.js",
+      "PackagePath": "staticwebassets\\js\\main.abef0229.js"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\js\\manifest.json",
+      "PackagePath": "staticwebassets\\js\\manifest.json"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\styles\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\styles\\StyleSheet.css"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\styles\\main.b45e9251.css",
+      "PackagePath": "staticwebassets\\styles\\main.b45e9251.css"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\BigLogo.abde25ef917b267ae580048beb3414c9.svg",
+      "PackagePath": "staticwebassets\\sysImages\\BigLogo.abde25ef917b267ae580048beb3414c9.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\ChangePass.4949f425f85d52d46c319ad60314c9fb.svg",
+      "PackagePath": "staticwebassets\\sysImages\\ChangePass.4949f425f85d52d46c319ad60314c9fb.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\Delete.7d9b3b0015875998ca0759e7b9a60a1f.svg",
+      "PackagePath": "staticwebassets\\sysImages\\Delete.7d9b3b0015875998ca0759e7b9a60a1f.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\Frame.e57c5367a8a3fa9e75131bbe06e1168b.svg",
+      "PackagePath": "staticwebassets\\sysImages\\Frame.e57c5367a8a3fa9e75131bbe06e1168b.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\Group 437.cf815418cc6ff55e231896f5455624b4.svg",
+      "PackagePath": "staticwebassets\\sysImages\\Group 437.cf815418cc6ff55e231896f5455624b4.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\Repass.273fcd52c430243282198b7d4ab28277.svg",
+      "PackagePath": "staticwebassets\\sysImages\\Repass.273fcd52c430243282198b7d4ab28277.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\delete (2).3694591177889af4fe2666022d31c614.svg",
+      "PackagePath": "staticwebassets\\sysImages\\delete (2).3694591177889af4fe2666022d31c614.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\edit.b58f899a9ced1253d5edf642aea5a35b.svg",
+      "PackagePath": "staticwebassets\\sysImages\\edit.b58f899a9ced1253d5edf642aea5a35b.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\logo.13ef850795bad4023228a711f9ff36cb.svg",
+      "PackagePath": "staticwebassets\\sysImages\\logo.13ef850795bad4023228a711f9ff36cb.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\logo.svg",
+      "PackagePath": "staticwebassets\\sysImages\\logo.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\save.7132160244bcbd913f3a81bae3dcd411.svg",
+      "PackagePath": "staticwebassets\\sysImages\\save.7132160244bcbd913f3a81bae3dcd411.svg"
+    },
+    {
+      "Id": "D:\\001 Bnan_Whatsapp\\Bnan_Whatsapp.Api\\wwwroot\\sysImages\\unDelete.png",
+      "PackagePath": "staticwebassets\\sysImages\\unDelete.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Bnan_Whatsapp.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Bnan_Whatsapp.Api.props",
+      "PackagePath": "build\\Bnan_Whatsapp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Bnan_Whatsapp.Api.props",
+      "PackagePath": "buildMultiTargeting\\Bnan_Whatsapp.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Bnan_Whatsapp.Api.props",
+      "PackagePath": "buildTransitive\\Bnan_Whatsapp.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

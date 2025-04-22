@@ -1,0 +1,17 @@
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Infrastructure.deps.json
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Infrastructure.runtimeconfig.json
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Infrastructure.dll
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Infrastructure.pdb
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.csproj.AssemblyReference.cache
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.AssemblyInfoInputs.cache
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.AssemblyInfo.cs
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.csproj.CoreCompileInputs.cache
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.dll
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\refint\Bnan_Whatsapp.Infrastructure.dll
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.pdb
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.genruntimeconfig.cache
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\ref\Bnan_Whatsapp.Infrastructure.dll
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Core.dll
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\bin\Debug\net7.0\Bnan_Whatsapp.Core.pdb
+D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Infrastructure\obj\Debug\net7.0\Bnan_Whatsapp.Infrastructure.csproj.CopyComplete

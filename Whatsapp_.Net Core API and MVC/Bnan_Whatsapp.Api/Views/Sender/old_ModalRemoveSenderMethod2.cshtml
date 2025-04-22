@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@section Scripts{
+    <script>
+        Swal.fire({
+            html: `
+            <div style="display: flex; align-items: flex-start; justify-content: center; gap: 10px;">
+              <img src="/sysImages/delete (2).3694591177889af4fe2666022d31c614.svg" alt="Delete Icon" />
+              <h3>تأكيد الحذف</h3>
+            </div>
+            <p class="text-end">بيانات ونتائج</p>
+          `,
+            showCancelButton: true,
+            confirmButtonText: 'موافق',
+            cancelButtonText: 'إلغاء الأمر',
+            confirmButtonColor: '#6a42c2',
+            cancelButtonColor: '#fcfaff',
+            customClass: {
+                cancelButton: 'custom-cancel-btn',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // تنفيذ الحذف
+            }
+        });
+    </script>
+}

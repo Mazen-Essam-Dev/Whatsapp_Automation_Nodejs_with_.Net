@@ -1,0 +1,78 @@
+﻿@using Bnan_Whatsapp.Api.ViewModels;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model EditReciverViewModel;
+@{
+    ViewData["Title"] = "خدمة واتساب";
+    //Layout = "~/Views/shared/_SharedLayout.cshtml";
+
+}
+
+
+
+<!-- نافذة منبثقة لتعديل مرسل -->
+<div class="modal fade" id="EditReciveModal" tabindex="-1" aria-labelledby="AddReciveModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- العنوان والإغلاق -->
+            <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 m-auto" id="AddReciveModalLabel">تعديل المرسل اليه</h1>
+                <button type="button" id="close_Edit_btn" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- محتوى النموذج -->
+            <div class="modal-body AddReciveModal">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <form asp-controller="Recive" asp-action="EditRecive" id="EditReciveModalForm" method="post">
+                            <input hidden asp-for="User_id" />
+                            <input hidden id="reciverCode" asp-for="Edited_Reciver.BnanWhatsappReciveCode" />
+
+
+                            <!-- رقم الجوال -->
+                            <div class="mb-4">
+                                <label for="phone2" class="form-label">رقم الجوال</label>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control inputStyle tel-input" id="phone2" asp-for="Edited_Reciver.BnanWhatsappReciveMobile" maxlength="20" autocomplete="off">
+                                    <input type="tel" class="form-control inputStyle tel-input" id="CountryKey2" asp-for="Edited_Reciver.BnanWhatsappReciveCountryKey" style="max-width:90px;" maxlength="6" autocomplete="off">
+                                </div>
+                                <div class="invaild">
+                                    <span asp-validation-for="Edited_Reciver.BnanWhatsappReciveMobile" class="text-danger"></span>
+                                    <span asp-validation-for="Edited_Reciver.BnanWhatsappReciveCountryKey" class="text-danger" style="margin-inline-start:120px;"></span>
+                                    <span class="text-danger" id="phone2-Error"></span>
+                                    <span class="text-danger" id="CountryKey2-Error" style="margin-inline-start:60px;"></span>
+                                </div>
+                            </div>
+
+                            <!-- الاسم عربي -->
+                            <div class="mb-4">
+                                <label for="BnanWhatsappReciveArName2" class="form-label">الاسم عربي</label>
+                                <label id="BnanWhatsappReciveArName2" class="form-label" style="margin-inline-start:30px"></label>
+                                @*<input type="text" class="form-control inputStyle" id="BnanWhatsappReciveArName" asp-for="Edited_Reciver.BnanWhatsappReciveArName" maxlength="50" autocomplete="off">
+                                <div class="invaild">
+                                <span asp-validation-for="Edited_Reciver.BnanWhatsappReciveArName" class="text-danger"></span>
+                                <span class="text-danger" id="BnanWhatsappReciveArName2-Error"></span>
+                                </div>*@
+                            </div>
+
+                            <!-- الاسم انجليزي -->
+                            <div class="mb-4">
+                                <label for="BnanWhatsappReciveEnName2" class="form-label">الاسم انجليزي</label>
+                                <label id="BnanWhatsappReciveEnName2" class="form-label" style="margin-inline-start:30px"></label>
+                                @*<input type="text" class="form-control inputStyle" id="BnanWhatsappReciveEnName" asp-for="Edited_Reciver.BnanWhatsappReciveEnName" maxlength="50" autocomplete="off">
+                                <div class="invaild">
+                                <span asp-validation-for="Edited_Reciver.BnanWhatsappReciveEnName" class="text-danger"></span>
+                                <span class="text-danger" id="BnanWhatsappReciveEnName2-Error"></span>
+                                </div>*@
+                            </div>
+
+                            <!-- زر إرسال -->
+                            <button type="button" class="btn Btn-Style w-100" onclick="submit_validateEditReciveForm()" >تحديث</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

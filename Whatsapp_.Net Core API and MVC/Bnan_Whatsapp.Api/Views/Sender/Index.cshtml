@@ -1,0 +1,329 @@
+﻿@using Bnan_Whatsapp.Api.ViewModels;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SenderPageVM;
+@{
+    ViewData["Title"] = "خدمة واتساب";
+    Layout = "~/Views/shared/_SharedLayout.cshtml";
+
+}
+
+
+@*<h1>View</h1>*@
+
+
+        <!-- جدول المرسلين -->
+        <div class="row table-row px-3">
+            <div class="col-12 scroll-table-div table-responsive-sm w-100">
+                <table class="tables-style table table-borderless" id="Branches-table">
+                    <thead class="sticky-top">
+                        <tr>
+                            <th></th>
+                            <th>حالة الاقتران</th>
+                            <th>الجوال</th>
+                            <th>الاسم</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                @{
+                    var no = 0;
+                }
+                @foreach(var item in Model.all_Senders)
+                {
+                    no++;
+                    <tr onclick='showEditSenderModal("@item.BnanWhatsappSenderCode" , "@item.BnanWhatsappSenderArName" , "@item.BnanWhatsappSenderEnName", "@item.BnanWhatsappSenderCountryKey" , "@item.BnanWhatsappSenderMobile")'>
+                        <td class="icons-td">
+                            @if(item.BnanWhatsappSenderStatus =="A"){
+                                <button class="btn tooltipp" onclick="event.stopPropagation(); showDeleteConfirm(@item.BnanWhatsappSenderCode)">
+                                    <img src="~/sysImages/Delete.7d9b3b0015875998ca0759e7b9a60a1f.svg" alt="Delete icon">
+                                    @*<img src="~/sysImages/unDelete.png" alt="Active icon">     *@
+                                    <span class="tooltiptext">حذف المرسل</span>
+                                </button>
+                            }
+                            else
+                            {
+                                <button class="btn tooltipp" onclick="event.stopPropagation(); showUn_DeleteConfirm(@item.BnanWhatsappSenderCode)">
+                                    <img src="~/sysImages/unDelete.png" alt="Delete icon">
+                                    @*<img src="~/sysImages/unDelete.png" alt="Active icon">     *@
+                                    <span class="tooltiptext">إرجاع المرسل</span>
+                                </button>
+                            }
+
+
+                            
+
+@*                            <a class="btn tooltipp" href="#/RePassword" data-discover="true">
+                                <img src="~/sysImages/ChangePass.4949f425f85d52d46c319ad60314c9fb.svg" alt="Change Pass icon">
+                                <span class="tooltiptext">تغيير كلمة السر</span>
+                            </a>*@
+
+                            @*<button class="btn tooltipp">
+                                <img src="~/sysImages/edit.b58f899a9ced1253d5edf642aea5a35b.svg" alt="edit icon">
+                                <span class="tooltiptext">تحديث البيانات</span>
+                            </button>*@
+                        </td>
+                        <td class="data-td">
+                            <p></p>
+                        </td>
+                        <td class="data-td">
+                            <p>@item.BnanWhatsappSenderCountryKey@item.BnanWhatsappSenderMobile</p>
+                        </td>
+                        <td class="data-td">
+                            <p>@item.BnanWhatsappSenderArName</p>
+                        </td>
+                        <td><div>@(no)</div></td>
+                    </tr>
+                }
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- زر إضافة مرسل -->
+        <div>
+            <button type="button" class="btn Btn-Style w-100 mt-3" data-bs-toggle="modal" data-bs-target="#AddSenderModal">
+                إضافة
+            </button>
+        </div>
+
+
+@Html.Partial("_ModalAddSenderForm", Model.AddSenderViewModel)
+@Html.Partial("_ModalEditSenderForm", Model.EditSenderViewModel)
+
+
+
+@section Scripts{
+    <script>
+        function showEditSenderModal(senderCode,ar,en,countryCode,mobile) {
+            console.log({ senderCode })
+            $("#senderCode").val(senderCode);
+            $("#BnanWhatsappSenderArName2").text(ar);
+            $("#BnanWhatsappSenderEnName2").text(en);
+            $("#phone2").val(mobile);
+            $("#CountryKey2").val(countryCode);
+            
+            var myModal = new bootstrap.Modal(document.getElementById('EditSenderModal'));
+            myModal.show();
+        }
+    </script>
+
+    @*<script>
+        function Submit_validateAddSenderForm() {
+
+            //alert("تم نداء الدالة ✅");
+            //return false; //testing
+
+            // جلب الحقول
+            const phone = document.getElementById('phone').value.trim();
+            const countryKey = document.getElementById('CountryKey').value.trim();
+            const arName = document.getElementById('BnanWhatsappSenderArName').value.trim();
+            const enName = document.getElementById('BnanWhatsappSenderEnName').value.trim();
+
+            // الفلاتر
+            let isValid = true;
+            console.log({ phone })
+            // التحقق من رقم الجوال
+            if (!phone) {
+                document.getElementById('phone-error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('phone-error').textContent = "";
+            }
+
+            // التحقق من المفتاح الدولي
+            if (!countryKey) {
+                document.getElementById('countryKey-error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('countryKey-error').textContent = "";
+            }
+
+            // التحقق من الاسم عربي
+            if (!arName) {
+                document.getElementById('arName-error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('arName-error').textContent = "";
+            }
+
+            // التحقق من الاسم انجليزي
+            if (!enName) {
+                document.getElementById('enName-error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('enName-error').textContent = "";
+            }
+
+            if (isValid) {
+                // ✅ أرسل الفورم يدويًا فقط لو جميع الحقول صحيحة
+                document.getElementById('addSenderForm').submit();
+            }
+        }
+    </script>*@
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // الآن DOM جاهز، نقدر نعرّف الدالة
+            window.submit_validateAddSenderForm = function () {
+                const phone = document.getElementById('phone').value.trim();
+                const countryKey = document.getElementById('CountryKey').value.trim();
+                const arName = document.getElementById('BnanWhatsappSenderArName').value.trim();
+                const enName = document.getElementById('BnanWhatsappSenderEnName').value.trim();
+
+                let isValid = true;
+
+                if (!phone) {
+                    document.getElementById('phone-Error').textContent = "الحقل مطلوب";
+                    isValid = false;
+                } else {
+                    document.getElementById('phone-Error').textContent = "";
+                }
+
+                if (!countryKey) {
+                    document.getElementById('countryKey-Error').textContent = "الحقل مطلوب";
+                    isValid = false;
+                } else {
+                    document.getElementById('countryKey-Error').textContent = "";
+                }
+
+                if (!arName) {
+                    document.getElementById('arName-Error').textContent = "الحقل مطلوب";
+                    isValid = false;
+                } else {
+                    document.getElementById('arName-Error').textContent = "";
+                }
+
+                if (!enName) {
+                    document.getElementById('enName-Error').textContent = "الحقل مطلوب";
+                    isValid = false;
+                } else {
+                    document.getElementById('enName-Error').textContent = "";
+                }
+
+                if (isValid) {
+                    document.getElementById('addSenderForm').submit();
+                }
+            }
+        });
+    </script>
+    <script>
+        function submit_validateEditSenderForm() {
+            const phone = document.getElementById('phone2').value.trim();
+            const countryKey = document.getElementById('CountryKey2').value.trim();
+            //const arName = document.getElementById('BnanWhatsappSenderArName').value.trim();
+            //const enName = document.getElementById('BnanWhatsappSenderEnName').value.trim();
+
+            let isValid = true;
+
+            if (!phone) {
+                document.getElementById('phone2-Error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('phone2-Error').textContent = "";
+            }
+
+            if (!countryKey) {
+                document.getElementById('CountryKey2-Error').textContent = "الحقل مطلوب";
+                isValid = false;
+            } else {
+                document.getElementById('CountryKey2-Error').textContent = "";
+            }
+
+            //if (!arName) {
+            //    document.getElementById('arName2-Error').textContent = "الحقل مطلوب";
+            //    isValid = false;
+            //} else {
+            //    document.getElementById('arName2-Error').textContent = "";
+            //}
+
+            //if (!enName) {
+            //    document.getElementById('enName2-Error').textContent = "الحقل مطلوب";
+            //    isValid = false;
+            //} else {
+            //    document.getElementById('enName2-Error').textContent = "";
+            //}
+
+            if (isValid) {
+                document.getElementById('EditSenderModalForm').submit();
+            }
+        }
+                
+    </script>
+
+
+    <script>
+        function showDeleteConfirm(itemId) {
+
+            Swal.fire({
+                //title: 'تأكيد الحذف',
+                html: `
+                        <div style="display: flex; align-items: flex-start; justify-content: center; gap: 10px;">
+                            <img src="/sysImages/delete (2).3694591177889af4fe2666022d31c614.svg" alt="Delete Icon">
+                            <h3>تأكيد الحذف</h3>
+                        </div>
+                        <p class="text-end">بيانات ونتائج</p>
+                    `,
+                //icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'موافق',
+                cancelButtonText: 'إلغاء الأمر',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // تنفيذ الحذف أو الإجراء
+                    console.log("تم الحذف");
+                    updateSenderStatus(itemId);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function showUn_DeleteConfirm(itemId) {
+
+            Swal.fire({
+                //title: 'تأكيد الحذف',
+                html: `
+                                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 10px;">
+                                    <img src="/sysImages/unDelete.png" style="max-width:30px;" alt="Delete Icon">
+                                    <h3>تأكيد الارجاع</h3>
+                                </div>
+                                <p class="text-end">بيانات ونتائج</p>
+                            `,
+                //icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'موافق',
+                cancelButtonText: 'إلغاء الأمر',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // تنفيذ الارجاع أو الإجراء
+                    console.log("تم الارجاع");
+                    updateSenderStatus(itemId);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function updateSenderStatus(itemId) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Sender/DeleteSender",
+                    data: { itemId: itemId },
+                    success: function (result) {
+                        console.log("Done");
+                    setTimeout(function () {
+                        location.href = '@Url.Action("Index", "Sender")';
+                    }, 500); // التأخير لمدة .5 ثوانٍ
+                    },
+                    error: function () {
+                    console.log("Error in Delete");
+                    }
+                });
+        }
+    </script>
+
+}

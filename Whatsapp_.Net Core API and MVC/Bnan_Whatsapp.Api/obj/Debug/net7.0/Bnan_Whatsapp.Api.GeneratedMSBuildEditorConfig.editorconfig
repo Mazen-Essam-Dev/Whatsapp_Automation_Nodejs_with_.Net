@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Bnan_Whatsapp.Api
+build_property.RootNamespace = Bnan_Whatsapp.Api
+build_property.ProjectDir = D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Api\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\001 Bnan_Whatsapp\Bnan_Whatsapp.Api
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Login/LoginPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/QrConnect/QrPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXJDb25uZWN0XFFyUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Recive/AddRecive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXZlXEFkZFJlY2l2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Recive/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXZlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Recive/_ModalAddReciveForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXZlXF9Nb2RhbEFkZFJlY2l2ZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Recive/_ModalEditReciveForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXZlXF9Nb2RhbEVkaXRSZWNpdmVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/RePassword/NewPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVQYXNzd29yZFxOZXdQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/old_ModalAddSender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXG9sZF9Nb2RhbEFkZFNlbmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/old_ModalRemoveSender.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXG9sZF9Nb2RhbFJlbW92ZVNlbmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/old_ModalRemoveSenderMethod2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXG9sZF9Nb2RhbFJlbW92ZVNlbmRlck1ldGhvZDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/_ModalAddSenderForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXF9Nb2RhbEFkZFNlbmRlckZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Sender/_ModalEditSenderForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZGVyXF9Nb2RhbEVkaXRTZW5kZXJGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/SendMessage/SendMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE1lc3NhZ2VcU2VuZE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/Shared/_SharedLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaGFyZWRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/User/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/001 Bnan_Whatsapp/Bnan_Whatsapp.Api/Views/User/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

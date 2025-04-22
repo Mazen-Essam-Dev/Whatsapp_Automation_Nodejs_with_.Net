@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div aria-labelledby="swal2-title"
+     aria-describedby="swal2-html-container"
+     class="swal2-popup swal2-modal swal2-show"
+     tabindex="-1"
+     role="dialog"
+     aria-live="assertive"
+     aria-modal="true"
+     style="display: grid;">
+
+    <!-- زر إغلاق -->
+    <button type="button"
+            class="swal2-close"
+            style="display: none;"
+            aria-label="Close this dialog">
+        ×
+    </button>
+
+    <!-- العنوان + الأيقونة -->
+    <div class="swal2-html-container" id="swal2-html-container" style="display: block;">
+        <div style="display: flex; align-items: flex-start; justify-content: center; gap: 10px;">
+            <img src="/sysImages/delete (2).3694591177889af4fe2666022d31c614.svg" alt="Delete Icon">
+            <h3>تأكيد الحذف</h3>
+        </div>
+        <p class="text-end">بيانات ونتائج</p>
+    </div>
+
+    <!-- الأزرار -->
+    <div class="swal2-actions" style="display: flex;">
+        <div class="swal2-loader"></div>
+
+        <button type="button"
+                class="swal2-confirm swal2-styled swal2-default-outline"
+                style="display: inline-block; background-color: rgb(106, 66, 194);"
+                aria-label="">
+            موافق
+        </button>
+
+        <button type="button"
+                class="swal2-deny swal2-styled"
+                style="display: none;"
+                aria-label="">
+            No
+        </button>
+
+        <button type="button"
+                class="swal2-cancel custom-cancel-btn swal2-styled swal2-default-outline"
+                style="display: inline-block; background-color: rgb(252, 250, 255);"
+                aria-label="">
+            إلغاء الأمر
+        </button>
+    </div>
+</div>

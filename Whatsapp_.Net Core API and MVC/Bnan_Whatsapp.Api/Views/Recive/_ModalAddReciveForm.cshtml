@@ -1,0 +1,72 @@
+﻿@using Bnan_Whatsapp.Api.ViewModels;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AddReciverViewModel;
+@{
+    ViewData["Title"] = "خدمة واتساب";
+    //Layout = "~/Views/shared/_SharedLayout.cshtml";
+}
+
+<!-- نافذة منبثقة لإضافة مرسل -->
+<div class="modal fade" id="AddReciveModal" tabindex="-1" aria-labelledby="AddReciveModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- العنوان والإغلاق -->
+            <div class="modal-header border-0">
+                <h1 class="modal-title fs-5 m-auto" id="AddReciveModalLabel">إضافة مرسل</h1>
+                <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- محتوى النموذج -->
+            <div class="modal-body AddReciveModal">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <form id="addReciveForm" asp-controller="Recive" asp-action="AddRecive" method="post">
+                            <input hidden asp-for="User_id" />
+
+
+                            <!-- رقم الجوال -->
+                            <div class="mb-4">
+                                <label for="phone" class="form-label">رقم الجوال</label>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control inputStyle tel-input" id="phone" asp-for="Added_Reciver.BnanWhatsappReciveMobile" maxlength="20" autocomplete="off">
+                                    <input type="tel" class="form-control inputStyle tel-input" id="CountryKey" asp-for="Added_Reciver.BnanWhatsappReciveCountryKey" style="max-width:90px;" maxlength="6" autocomplete="off">
+                                </div>
+                                <div class="invaild">
+                                    <span asp-validation-for="Added_Reciver.BnanWhatsappReciveMobile" class="text-danger"></span>
+                                    <span asp-validation-for="Added_Reciver.BnanWhatsappReciveCountryKey" class="text-danger" style="margin-inline-start:120px;"></span>
+                                    <span class="text-danger" id="phone-Error"></span>
+                                    <span class="text-danger" id="countryKey-Error" style="margin-inline-start:60px;"></span>
+                                </div>
+                            </div>
+
+                            <!-- الاسم عربي -->
+                            <div class="mb-4">
+                                <label for="BnanWhatsappReciveArName" class="form-label">الاسم عربي</label>
+                                <input type="text" class="form-control inputStyle" id="BnanWhatsappReciveArName" asp-for="Added_Reciver.BnanWhatsappReciveArName" maxlength="50" autocomplete="off">
+                                <div class="invaild">
+                                    <span asp-validation-for="Added_Reciver.BnanWhatsappReciveArName" class="text-danger"></span>
+                                    <span class="text-danger" id="arName-Error"></span>
+                                </div>
+                            </div>
+
+                            <!-- الاسم انجليزي -->
+                            <div class="mb-4">
+                                <label for="BnanWhatsappReciveEnName" class="form-label">الاسم انجليزي</label>
+                                <input type="text" class="form-control inputStyle" id="BnanWhatsappReciveEnName" asp-for="Added_Reciver.BnanWhatsappReciveEnName" maxlength="50" autocomplete="off">
+                                <div class="invaild">
+                                    <span asp-validation-for="Added_Reciver.BnanWhatsappReciveEnName" class="text-danger"></span>
+                                    <span class="text-danger" id="enName-Error"></span>
+                                </div>
+                            </div>
+
+                            <!-- زر إرسال -->
+                            <button type="button" class="btn Btn-Style w-100" onclick="submit_validateAddReciveForm()">إضافة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

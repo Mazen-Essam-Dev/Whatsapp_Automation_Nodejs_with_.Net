@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Bnan_Whatsapp.Api.ViewModels;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model AddReciverViewModel;
+@{
+    ViewData["Title"] = "خدمة واتساب";
+    Layout = "~/Views/shared/_SharedLayout.cshtml";
+
+}
+
+<div class="">
+    <div class="container-fluid">
+        <div class="row g-3 m-auto">
+
+            <!-- النموذج -->
+            <div class="col-md-9 col-lg-7">
+                <form class="row g-3 needs-validation justify-content-center" asp-action="AddRecive" asp-controller="Recive" method="post">
+                    <input hidden asp-for="User_id" />
+                    <!-- الاسم عربي -->
+                    <div class="col-md-7">
+                        <label for="BnanWhatsappReciveArName" class="form-label">الاسم عربي</label>
+                        <input type="text" class="form-control inputStyle" id="BnanWhatsappReciveArName" asp-for="Added_Reciver.BnanWhatsappReciveArName" maxlength="50" autocomplete="off">
+                        <div class="invaild">
+                            <span asp-validation-for="Added_Reciver.BnanWhatsappReciveArName" class="text-danger"></span>
+                            <span class="text-danger" id="BnanWhatsappReciveArName-Error"></span>
+                        </div>
+                    </div>
+
+                    <!-- الاسم انجليزي -->
+                    <div class="col-md-7">
+                        <label for="BnanWhatsappReciveEnName" class="form-label">الاسم انجليزي</label>
+                        <input type="text" class="form-control inputStyle" id="BnanWhatsappReciveEnName" asp-for="Added_Reciver.BnanWhatsappReciveEnName" maxlength="50" autocomplete="off">
+                        <div class="invaild">
+                            <span asp-validation-for="Added_Reciver.BnanWhatsappReciveEnName" class="text-danger"></span>
+                            <span class="text-danger" id="BnanWhatsappReciveEnName-Error"></span>
+                        </div>
+                    </div>
+
+
+                    <!-- رقم الجوال -->
+                    <div class="col-md-7">
+                        <label for="phone" class="form-label">رقم الجوال</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control inputStyle tel-input" id="phone" asp-for="Added_Reciver.BnanWhatsappReciveMobile" maxlength="20" autocomplete="off">
+                            <input type="tel" class="form-control inputStyle tel-input" id="CountryKey" asp-for="Added_Reciver.BnanWhatsappReciveCountryKey" style="max-width:90px;" maxlength="6" autocomplete="off">
+                        </div>
+                        <div class="invaild">
+                            <span asp-validation-for="Added_Reciver.BnanWhatsappReciveMobile" class="text-danger"></span>
+                            <span asp-validation-for="Added_Reciver.BnanWhatsappReciveCountryKey" class="text-danger" style="margin-inline-start:120px;"></span>
+                            <span class="text-danger" id="BnanWhatsappReciveMobile-Error"></span>
+                            <span class="text-danger" id="BnanWhatsappReciveCountryKey-Error" style="margin-inline-start:120px;"></span>
+                        </div>
+                    </div>
+
+                    <!-- العلاقة -->
+                    <div class="col-md-7">
+                        <label for="Relation" class="form-label">العلاقة</label>
+                        <select class="form-select select-style" asp-for="Added_Reciver.BnanWhatsappReciveRelationshipId" required>
+                            @*<option disabled value="null" selected>-- اختر العلاقة --</option>*@
+                            <option disabled value="null" selected></option>
+                            @foreach (var item in Model.all_Relationship)
+                            {
+                                <option value="@item.BnanWhatsappRelationshipCode" id="@item.BnanWhatsappRelationshipCode">@item.BnanWhatsappRelationshipArName</option>
+
+                            }
+                        </select>
+                        <div class="invaild">
+                            <span asp-validation-for="Added_Reciver.BnanWhatsappReciveRelationshipId" class="text-danger"></span>
+                            <span class="text-danger" id="BnanWhatsappReciveRelationshipId-Error"></span>
+                        </div>
+                    </div>
+
+                    <!-- زر الإضافة -->
+                    <div class="col-md-7">
+                        <button type="submit" class="btn Btn-Style w-100 mt-3">إضافة</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- صورة جانبية -->
+            <div class="col-md-3 col-lg-5 d-flex align-items-center justify-content-center justify-content-lg-center">
+                <img src="/sysImages/Group 437.cf815418cc6ff55e231896f5455624b4.svg" alt="img for design" class="receiverImg w-100">
+            </div>
+
+        </div>
+    </div>
+</div>

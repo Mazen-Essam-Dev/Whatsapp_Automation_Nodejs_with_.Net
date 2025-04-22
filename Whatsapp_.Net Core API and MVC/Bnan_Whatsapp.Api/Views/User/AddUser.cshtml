@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "خدمة واتساب";
+    Layout = "~/Views/shared/_SharedLayout.cshtml";
+
+}
+
+<div class="">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center py-5">
+            <div class="col-md-10 col-lg-5 loginCard mt-4">
+
+                <!-- شعار -->
+                <img class="LoginLogo" src="/sysImages/BigLogo.abde25ef917b267ae580048beb3414c9.svg" alt="logo">
+
+                <!-- العنوان -->
+                <div class="row justify-content-center">
+                    <div class="col py-5">
+                        <h2 class="text-center">تسجيل الدخول</h2>
+                    </div>
+
+                    <!-- نموذج تسجيل الدخول -->
+                    <div class="col-md-11">
+                        <form>
+
+                            <!-- رقم الجوال -->
+                            <div class="mb-5">
+                                <label for="Phone" class="form-label">الجوال</label>
+                                <input type="text" class="form-control inputStyle" id="Phone" name="Phone">
+                            </div>
+
+                            <!-- كلمة السر -->
+                            <div class="mb-5">
+                                <label for="Password" class="form-label">كلمة السر</label>
+                                <input type="password" class="form-control inputStyle" id="Password" name="Password">
+                            </div>
+
+                            <!-- زر تسجيل الدخول -->
+                            <button type="submit" class="btn Btn-Style w-100">تسجيل الدخول</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
