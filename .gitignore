@@ -1,0 +1,16 @@
+.wwebjs_auth/
+.wwebjs_cache/
+node_modules/
+chrome/
+chrome-mac/
+chromium/
+5.zip
+chrome.zip
+node_modules.zip
+WaMa2_worked.zip
+WaMa3.zip
+Wama4.zip
+waMaApi.rar
+waMaApi_V1_vps.rar
+whats_db_v1.sql
+whatss22_db.sql

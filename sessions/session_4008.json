@@ -1,0 +1,42 @@
+[{
+  "_events": "1",
+  "_eventsCount": 10,
+  "options": "2",
+  "authStrategy": "3",
+  "pupBrowser": null,
+  "pupPage": null,
+  "currentIndexHtml": null,
+  "lastLoggedOut": false
+},{},{
+  "authStrategy": "3",
+  "puppeteer": "4",
+  "webVersion": "5",
+  "webVersionCache": "6",
+  "authTimeoutMs": 0,
+  "qrMaxRetries": 0,
+  "takeoverOnConflict": false,
+  "takeoverTimeoutMs": 0,
+  "userAgent": "7",
+  "ffmpegPath": "8",
+  "bypassCSP": false
+},{
+  "dataPath": "9",
+  "clientId": "10",
+  "client": "0",
+  "userDataDir": "11"
+},{
+  "headless": true,
+  "args": "12",
+  "timeout": 29000,
+  "ignoreHTTPSErrors": true,
+  "defaultViewport": null,
+  "userDataDir": "11"
+},"2.2346.52",{
+  "type": "13"
+},"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36","ffmpeg","C:\\Users\\HP\\Desktop\\waMaApi\\.wwebjs_auth","client_4008","C:\\Users\\HP\\Desktop\\waMaApi\\.wwebjs_auth\\session-client_4008",[
+  "14",
+  "15",
+  "16",
+  "17",
+  "18"
+],"local","--no-sandbox","--disable-setuid-sandbox","--disable-dev-shm-usage","--disable-extensions","--disable-gpu"]

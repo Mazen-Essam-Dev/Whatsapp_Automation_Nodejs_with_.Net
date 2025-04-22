@@ -1,0 +1,87 @@
+replace 
+C:\Users\HP\Desktop\waMaApi\node_modules\whatsapp-web.js\src\Client.js
+
+=========
+عدل في ملف Client.js
+============
+
+        this.pupPage.on('framenavigated', async (frame) => {
+            if(frame.url().includes('post_logout=1') || this.lastLoggedOut) {
+                console.log('done From in');
+
+                // // let phone = "201112847004";
+                // // //let phone = this_client.info.wid.user;
+                // // phone = phone + "@c.us";
+                // // //let name = this_client.info.pushname;
+                // // //let message1 = " مرحبا بك" + "نود ان نخبرك ان جهازكم " +"قد تم تسجيل خروجه";
+                // // let message1 = "mmmmm";
+                // // this.sendMessage(phone,message1).then(resultss=>{
+                // //     console.log("message sent");
+                // // });
+                // // await wait2(23000);
+
+                this.emit(Events.DISCONNECTED, 'LOGOUT33');
+                await this.pupBrowser.close();
+                console.log("I closed web chrome");
+                ////await this.authStrategy.logout();
+                await this.authStrategy.beforeBrowserInitialized();
+                ////await this.authStrategy.afterBrowserInitialized();
+                this.lastLoggedOut = false;
+            }
+            await this.inject(true);
+            console.log('Not done From in Remove QR');
+        });
+    }
+
+
+===========
+اضف في الاعلى 
+========
+
+function wait2(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+===============
+استبدل التالي ايضا 
+===============
+
+async logout() {
+        this.emit(Events.DISCONNECTED, 'LOGOUT33');
+        await this.pupBrowser.close();
+        console.log("I closed web chrome");
+        ////await this.authStrategy.logout();
+        await this.authStrategy.beforeBrowserInitialized();
+        // ///////
+        // await this.pupPage.evaluate(() => {
+        //     return window.Store.AppState.logout();
+        // });
+        // await this.pupBrowser.close();
+        
+        // let maxDelay = 0;
+        // while (this.pupBrowser.isConnected() && (maxDelay < 10)) { // waits a maximum of 1 second before calling the AuthStrategy
+        //     await new Promise(resolve => setTimeout(resolve, 100));
+        //     maxDelay++; 
+        // }
+        
+        // await this.authStrategy.logout();
+    }
+
+============
+بدلا من 
+============
+
+    async logout() {
+        await this.pupPage.evaluate(() => {
+            return window.Store.AppState.logout();
+        });
+        await this.pupBrowser.close();
+        
+        let maxDelay = 0;
+        while (this.pupBrowser.isConnected() && (maxDelay < 10)) { // waits a maximum of 1 second before calling the AuthStrategy
+            await new Promise(resolve => setTimeout(resolve, 100));
+            maxDelay++; 
+        }
+        
+        await this.authStrategy.logout();
+    }
